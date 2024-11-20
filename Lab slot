@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Selection</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to the Lab Slot Slection</h1>
+    </header>
+
+    <main class="main-container">
+        <section id="department-selection">
+            <img src="bitimage..jpg" alt="Bannari Amman Institute of Technology">
+            <h2>Select Your Department</h2>
+            <div id="departments">
+                <a href="test2.html?department=cs" class="btn">Computer Science</a>
+                <a href="test2.html?department=ee" class="btn">Electrical Engineering</a>
+                <a href="test2.html?department=me" class="btn">Mechanical Engineering</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; BIT Academic Portal</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            // Check if the user is logged in by checking localStorage
+            const user = localStorage.getItem('user');
+            
+    
+                // Optional: You can display the user's name here
+                const userData = JSON.parse(user);
+                document.querySelector('.header h1').textContent = `Welcome, ${userData.name}`;
+        };
+    </script>
+</body>
+</html>
